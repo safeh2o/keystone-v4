@@ -6,6 +6,8 @@
 </div>
 <br>
 
+### This is a fork of [Keystone v4](https://github.com/keystonejs/keystone-classic) by the SafeH2O team
+
 
 # ![KeystoneJS](http://v3.keystonejs.com/images/logo.svg)
 
