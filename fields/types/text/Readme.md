@@ -21,7 +21,7 @@ Displayed as a text field in the Admin UI.
 
 ### `crop(length, append, preserveWords)`
 
-Uses the `cropString()` method from [keystone-utils](https://github.com/keystonejs/keystone-utils#conversion-utilities) to crop the value to the specified length.
+Uses the `cropString()` method from [keystone-utils](https://github.com/safeh2o/keystone-v4-utils#conversion-utilities) to crop the value to the specified length.
 
 ### `format`
 

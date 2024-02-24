@@ -8,7 +8,7 @@ contain the same code used by [ConnextCMS](https://github.com/skagitpublishing/c
 ### Setup
 
 This guide assumes that you have a working version of
-[KeystoneJS](https://github.com/keystonejs/keystone). All file path
+[KeystoneJS](https://github.com/safeh2o/keystone-v4). All file path
 references assume that you are working from the same directory as the
 `keystone.js` file.
 

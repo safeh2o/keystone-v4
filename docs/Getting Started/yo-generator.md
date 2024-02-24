@@ -465,6 +465,6 @@ To sign in to Keystone's Admin UI, go to [localhost:3000/keystone](http://localh
 
 ... you're done! Well, not really. It's time to start building your app now. For more information on list options and the field types Keystone supports, browse the [Database Configuration](/documentation/database/) documentation.
 
-You should also [Follow @KeystoneJS on Twitter](https://twitter.com/keystonejs) for news and updates, [Star KeystoneJS on GitHub](https://github.com/keystonejs/keystone), and discuss this guide (or anything KeystoneJS related) on the [KeystoneJS Community Slack](https://launchpass.com/keystonejs).
+You should also [Follow @KeystoneJS on Twitter](https://twitter.com/keystonejs) for news and updates, [Star KeystoneJS on GitHub](https://github.com/safeh2o/keystone-v4), and discuss this guide (or anything KeystoneJS related) on the [KeystoneJS Community Slack](https://launchpass.com/keystonejs).
 
 Enjoy using KeystoneJS!

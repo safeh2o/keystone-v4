@@ -229,7 +229,7 @@ Event.updateItem(newEvent, req.body, function (error) {
 ## Congratulations
 Well done! You have finished this four-step guide to getting started with Keystone, and you now have a basic Keystone app complete with an API for form handling that adds data to a database. For more information on list options and the field types Keystone supports, browse the [Database Configuration](/documentation/database/) documentation.
 
-You should also [Follow @KeystoneJS on Twitter](https://twitter.com/keystonejs) for news and updates, [Star KeystoneJS on GitHub](https://github.com/keystonejs/keystone), and discuss this guide (or anything KeystoneJS related) on the [KeystoneJS Community Slack](https://launchpass.com/keystonejs).
+You should also [Follow @KeystoneJS on Twitter](https://twitter.com/keystonejs) for news and updates, [Star KeystoneJS on GitHub](https://github.com/safeh2o/keystone-v4), and discuss this guide (or anything KeystoneJS related) on the [KeystoneJS Community Slack](https://launchpass.com/keystonejs).
 
 Enjoy using KeystoneJS!
 

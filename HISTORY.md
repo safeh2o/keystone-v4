@@ -2,7 +2,7 @@
 
 KeystoneJS is maintained by [@JedWatson](https://github.com/JedWatson) and an amazing team of contributors. All contributions are given credit here except for Jed's.
 
-As of version 4 we have moved our changelog to the [GitHub releases]( https://github.com/keystonejs/keystone/releases) page. See there for the latest release notes.
+As of version 4 we have moved our changelog to the [GitHub releases]( https://github.com/safeh2o/keystone-v4/releases) page. See there for the latest release notes.
 
 Changes for 3.x releases are included below.
 
@@ -53,7 +53,7 @@ This is a hotfix release to allow for adding headers when sending emails.
 
 ## v0.3.15 / 2015-10-15
 
-* added; new hooks in the app middleware setup are available, see [#1736](https://github.com/keystonejs/keystone/issues/1736) for documentation.
+* added; new hooks in the app middleware setup are available, see [#1736](https://github.com/safeh2o/keystone-v4/issues/1736) for documentation.
 * updated; all packages, including pre-build client side bundles
 
 ## v0.3.14 / 2015-08-25
@@ -87,7 +87,7 @@ This is a hotfix release to allow for adding headers when sending emails.
 * fixed; API error string was missing `not` in message, thanks [Daniel Cousens](https://github.com/dcousens)
 * improved; better instructions for installing missing session store modules
 * fixed; delete confirmation was not working (items could be deleted with a single click), thanks [gerotakke](gerotakke)
-* added; new `utc` option for `Date` and `DateTime` field types, see [#1487](https://github.com/keystonejs/keystone/issues/1487) for more details.
+* added; new `utc` option for `Date` and `DateTime` field types, see [#1487](https://github.com/safeh2o/keystone-v4/issues/1487) for more details.
 
 ## v0.3.11 / 2015-06-12
 
@@ -108,7 +108,7 @@ If you are interested in being part of Keystone's development team and aren't in
 * added; `parseFormat` option for `Date` / `Datetime` field types, and more robust validation in `DateArray`
 * added; `logger options` setting, thanks [Johnny Estilles](https://github.com/JohnnyEstilles)
 
-Also, our site and documentation have been split out into their own repository: [keystonejs/keystonejs-site](https://github.com/keystonejs/keystonejs-site). Please contribute any changes, additions and issues to that new repo going forward.
+Also, our site and documentation have been split out into their own repository: [keystonejs/keystonejs-site](https://github.com/safeh2o/keystone-v4js-site). Please contribute any changes, additions and issues to that new repo going forward.
 
 ## v0.3.9 / 2015-05-17
 
@@ -202,7 +202,7 @@ Also in this release: Keystone is completely free of ESLint warnings thanks to t
 * changed; `lang` option because `language` for the `Code` field type as per the 0.3.x docs
 * changed; Code fields are now allowed to be initial fields
 * updated; TinyMCE to 4.1.7
-* updated; Many packages, see [e561fa6](https://github.com/keystonejs/keystone/commit/e561fa6c32a059f847283e98e2ecc95255829056)
+* updated; Many packages, see [e561fa6](https://github.com/safeh2o/keystone-v4/commit/e561fa6c32a059f847283e98e2ecc95255829056)
 * fixed; issues with the `ipRangeRestrict` option, thanks [Johnny Estilles](https://github.com/JohnnyEstilles)
 * fixed; relationship reorder is persisted even when the linked IDs haven't changed, thanks [Robert Clark](https://github.com/lojack)
 * fixed; check for existence req.user on DELETE action, thanks [Josh Lasdin](https://github.com/joshlasdin)
@@ -221,11 +221,11 @@ Also more tests and general cleanup. Thanks especially to [Sebastian McKenzie](h
 
 ## v0.3.0 / 2015-02-06
 
-This is a major new version of KeystoneJS. The changes are too many to simply enumerate here, however we've done our best to ensure compatibility and feature parity with 0.2.x. If you experience any unexpected issues or behaviours, please let us know by opening a [Github Issue](https://github.com/keystonejs/keystone/issues).
+This is a major new version of KeystoneJS. The changes are too many to simply enumerate here, however we've done our best to ensure compatibility and feature parity with 0.2.x. If you experience any unexpected issues or behaviours, please let us know by opening a [Github Issue](https://github.com/safeh2o/keystone-v4/issues).
 
-For notes regarding breaking changes in the release, please see our [0.2.x to 0.3.x Changes wiki page](https://github.com/keystonejs/keystone/wiki/0.2.x-to-0.3.x-Changes).
+For notes regarding breaking changes in the release, please see our [0.2.x to 0.3.x Changes wiki page](https://github.com/safeh2o/keystone-v4/wiki/0.2.x-to-0.3.x-Changes).
 
-Thanks to [all our contributors](https://github.com/keystonejs/keystone/graphs/contributors) for the huge amount of effort that went into this release, and the ongoing work designing, programming, testing and documenting KeystoneJS.
+Thanks to [all our contributors](https://github.com/safeh2o/keystone-v4/graphs/contributors) for the huge amount of effort that went into this release, and the ongoing work designing, programming, testing and documenting KeystoneJS.
 
 ### Updated Express to 4.0
 
@@ -235,7 +235,7 @@ Express 4 included several breaking changes from Express 3. Keystone simplifies 
 
 The Admin UI forms have been rebuilt from the ground up with React.js. This is part of a larger, ongoing effort to move the Admin UI entirely towards a rich, customisable single page web app.
 
-The UI has been cleaned up and improved, and the field types should support the same features and behaviours as in 0.2.x. If any field types or features don't continue to work as expected, please open a [GitHub Issue](https://github.com/keystonejs/keystone/issues) so we can fix it!
+The UI has been cleaned up and improved, and the field types should support the same features and behaviours as in 0.2.x. If any field types or features don't continue to work as expected, please open a [GitHub Issue](https://github.com/safeh2o/keystone-v4/issues) so we can fix it!
 
 
 ## v0.2.42 / 2015-01-20
@@ -499,22 +499,22 @@ types, thanks [Benjamin Lupton](https://github.com/balupton)
 
 ## v0.2.16 / 2014-05-14
 
-* fixed; issues with Keystone.prototype.import, see [#348](https://github.com/keystonejs/keystone/issues/348), thanks [ashleycorker](https://github.com/ashleycoker)
-* fixed; issues with geo handling in Location fields, see [#344](https://github.com/keystonejs/keystone/issues/344), thanks [mandb](https://github.com/mandb)
+* fixed; issues with Keystone.prototype.import, see [#348](https://github.com/safeh2o/keystone-v4/issues/348), thanks [ashleycorker](https://github.com/ashleycoker)
+* fixed; issues with geo handling in Location fields, see [#344](https://github.com/safeh2o/keystone-v4/issues/344), thanks [mandb](https://github.com/mandb)
 
 ## v0.2.15 / 2014-05-13
 
 * fixed; Added note to fields that didnt have one, thanks [Ötvös Richárd](https://github.com/RichardOtvos)
 * fixed; Only show "Open Keystone" link to admins, thanks [John Beppu](https://github.com/beppu)
 * fixed; Password fields are formatted correctly on the list screen of the Admin UI
-* added; Support for custom MongoDB collection names (and other Schema options, see [#292](https://github.com/keystonejs/keystone/issues/292))
+* added; Support for custom MongoDB collection names (and other Schema options, see [#292](https://github.com/safeh2o/keystone-v4/issues/292))
 * added; Support for clearing password fields (if not required)
 * added; Password.compare is now available on the Field object
 * added; Support for loading fixture data with `keystone.createItems()` and in update scripts, see [this gist](https://gist.github.com/JedWatson/10739959) for an example
-* added; Basic support for redirects, see [#303](https://github.com/keystonejs/keystone/issues/303) for details
+* added; Basic support for redirects, see [#303](https://github.com/safeh2o/keystone-v4/issues/303) for details
 * added; Support for excluding the blank option in Select fields with the `emptyOption` option
 * improved; Nicer exception on EADDRINUSE error
-* added; Warning when required fields aren't initial, see [#300](https://github.com/keystonejs/keystone/issues/300)
+* added; Warning when required fields aren't initial, see [#300](https://github.com/safeh2o/keystone-v4/issues/300)
 * fixed; Truthy check for port breaks listening on any open port
 * fixed; Changed how updates are discovered and included, fixes previous issues with .DS_Store files
 * added; test script to package.json, spec reporter for Mocha tests and other test improvements, thanks [David Banham](https://github.com/davidbanham)
@@ -568,7 +568,7 @@ Also; all dependencies are up to date with their latest published versions, exce
 * fixed; issue with the 'new item' button on the item details page in the Admin UI triggering autocreate functionality incorrectly, thanks [Thomas Pedersen](https://github.com/thedersen)
 * fixed; redirect parameter for signin page now protects against open redirect attacks, thanks [Oliver Jenkins](https://github.com/oliverjenkins)
 * fixed; 'host is undefined' issue with certain configurations, see #241
-* fixed; accented characters are converted correctly when generating slugs, thanks to [keystone-utils](https://github.com/keystonejs/keystone-utils) 0.1.7
+* fixed; accented characters are converted correctly when generating slugs, thanks to [keystone-utils](https://github.com/safeh2o/keystone-v4-utils) 0.1.7
 
 (emergency version bump from 0.2.9 because of white-space issue with new Jade version)
 
@@ -662,7 +662,7 @@ This version also contains the new docs and website developed by @jossmackison a
 * added; pre upload queue for s3file field type (set the `pre.upload` option, or call `{list}.fields.{s3filefield}.pre('upload', ...)`)
 * added; initial (create form) support for location fields
 * added; initial (create form) support for markdown fields, thanks [Jimmy Hillis](https://github.com/jimmyhillis)
-* improved; much more flexible support for http server startup options, see [#154](https://github.com/keystonejs/keystone/issues/154)
+* improved; much more flexible support for http server startup options, see [#154](https://github.com/safeh2o/keystone-v4/issues/154)
 
 
 ## v0.2.0 / 2014-01-26

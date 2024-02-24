@@ -11,7 +11,7 @@ Displayed as a textarea field in the Admin UI.
 
 ### `format`
 
-Uses the `textToHTML()` method in [keystone-utils](https://github.com/keystonejs/keystone-utils#conversion-utilities) to convert the value to HTML.
+Uses the `textToHTML()` method in [keystone-utils](https://github.com/safeh2o/keystone-v4-utils#conversion-utilities) to convert the value to HTML.
 
 ## Options
 

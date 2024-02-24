@@ -71,4 +71,4 @@ const createPost = ({ name, category }) => {
 }
 ```
 
-Fixing this properly would require significant refactoring of how the update framework works, which we're unable to commit to for the moment. [The relevant GitHub Issue is here](https://github.com/keystonejs/keystone/issues/2980), and of course PRs are always welcome.
+Fixing this properly would require significant refactoring of how the update framework works, which we're unable to commit to for the moment. [The relevant GitHub Issue is here](https://github.com/safeh2o/keystone-v4/issues/2980), and of course PRs are always welcome.

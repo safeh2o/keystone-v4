@@ -20,7 +20,7 @@
 <!--
  Notes:
  * For more information on the End-2-End (E2E) testing framework for Keystone 4, see:
-    https://github.com/keystonejs/keystone-nightwatch-e2e
+    https://github.com/safeh2o/keystone-v4-nightwatch-e2e
  * To successfully have all E2E tests pass you need to have the following set up:
     - A recent version of Chrome or Firefox
     - Java Runtime Environment 1.8+

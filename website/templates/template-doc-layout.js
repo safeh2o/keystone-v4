@@ -58,7 +58,7 @@ export default class DocumentLayout extends React.Component {
 
 		// TODO add file path to Markdown schema
 		const editPath = `
-			https://github.com/keystonejs/keystone/blob/master/docs/${path}
+			https://github.com/safeh2o/keystone-v4/blob/master/docs/${path}
 		`;
 
 		return (

@@ -67,7 +67,7 @@ export default class Header extends Component {
 					</li>
 					<li className={compose(styles.navItem)}>
 						<a
-							href="https://github.com/keystonejs/keystone"
+							href="https://github.com/safeh2o/keystone-v4"
 							target="_blank"
 							className={compose(styles.navItemLink)}
 						>
@@ -93,7 +93,7 @@ export default class Header extends Component {
 				>
 					<GithubButton
 						count={this.state.stars}
-						repo="https://github.com/keystonejs/keystone"
+						repo="https://github.com/safeh2o/keystone-v4"
 					/>
 				</div>
 			</header>

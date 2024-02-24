@@ -42,7 +42,7 @@ class Navbar extends Component {
 						</a>
 						<span css={styles.github__divider}>/</span>
 						<a
-							href="https://github.com/keystonejs/keystone"
+							href="https://github.com/safeh2o/keystone-v4"
 							target="_blank"
 							css={[styles.github__link, styles.github__repo]}
 						>

@@ -3,7 +3,7 @@ Deprecated.
 
 Using this field will now throw an error, and this code will be removed soon.
 
-See https://github.com/keystonejs/keystone/wiki/File-Fields-Upgrade-Guide
+See https://github.com/safeh2o/keystone-v4/wiki/File-Fields-Upgrade-Guide
 */
 
 /* eslint-disable */
@@ -13,10 +13,11 @@ See https://github.com/keystonejs/keystone/wiki/File-Fields-Upgrade-Guide
  * @extends Field
  * @api public
  */
-function localfile (list, path, options) {
-
-	throw new Error('The LocalFile field type has been removed. Please use File instead.'
-		+ '\n\nSee https://github.com/keystonejs/keystone/wiki/File-Fields-Upgrade-Guide\n');
+function localfile(list, path, options) {
+	throw new Error(
+		"The LocalFile field type has been removed. Please use File instead." +
+			"\n\nSee https://github.com/safeh2o/keystone-v4/wiki/File-Fields-Upgrade-Guide\n"
+	);
 
 	/*
 
@@ -46,9 +47,8 @@ function localfile (list, path, options) {
 	}
 
 	*/
-
 }
-localfile.properName = 'LocalFile';
+localfile.properName = "LocalFile";
 // util.inherits(localfile, FieldType);
 
 /**
@@ -57,30 +57,32 @@ localfile.properName = 'LocalFile';
  * @api public
  */
 localfile.prototype.addToSchema = function (schema) {
-
 	var field = this;
 
-	var paths = this.paths = {
+	var paths = (this.paths = {
 		// fields
-		filename: this.path + '.filename',
-		originalname: this.path + '.originalname',
-		path: this.path + '.path',
-		size: this.path + '.size',
-		filetype: this.path + '.filetype',
+		filename: this.path + ".filename",
+		originalname: this.path + ".originalname",
+		path: this.path + ".path",
+		size: this.path + ".size",
+		filetype: this.path + ".filetype",
 		// virtuals
-		exists: this.path + '.exists',
-		href: this.path + '.href',
-		upload: this.path + '_upload',
-		action: this.path + '_action',
-	};
-
-	var schemaPaths = this._path.addTo({}, {
-		filename: String,
-		originalname: String,
-		path: String,
-		size: Number,
-		filetype: String,
+		exists: this.path + ".exists",
+		href: this.path + ".href",
+		upload: this.path + "_upload",
+		action: this.path + "_action",
 	});
+
+	var schemaPaths = this._path.addTo(
+		{},
+		{
+			filename: String,
+			originalname: String,
+			path: String,
+			size: Number,
+			filetype: String,
+		}
+	);
 
 	schema.add(schemaPaths);
 
@@ -109,10 +111,10 @@ localfile.prototype.addToSchema = function (schema) {
 	// reset clears the value of the field
 	var reset = function (item) {
 		item.set(field.path, {
-			filename: '',
-			path: '',
+			filename: "",
+			path: "",
 			size: 0,
-			filetype: '',
+			filetype: "",
 		});
 	};
 
@@ -135,7 +137,9 @@ localfile.prototype.addToSchema = function (schema) {
 		 */
 		delete: function () {
 			if (exists(this)) {
-				fs.unlinkSync(path.join(this.get(paths.path), this.get(paths.filename)));
+				fs.unlinkSync(
+					path.join(this.get(paths.path), this.get(paths.filename))
+				);
 			}
 			reset(this);
 		},
@@ -147,7 +151,10 @@ localfile.prototype.addToSchema = function (schema) {
 
 	// expose a method on the field to call schema methods
 	this.apply = function (item, method) {
-		return schemaMethods[method].apply(item, Array.prototype.slice.call(arguments, 2));
+		return schemaMethods[method].apply(
+			item,
+			Array.prototype.slice.call(arguments, 2)
+		);
 	};
 
 	this.bindUnderscoreMethods();
@@ -160,7 +167,7 @@ localfile.prototype.addToSchema = function (schema) {
  * @api public
  */
 localfile.prototype.format = function (item) {
-	if (!item.get(this.paths.filename)) return '';
+	if (!item.get(this.paths.filename)) return "";
 	if (this.hasFormatter()) {
 		var file = item.get(this.path);
 		file.href = this.href(item);
@@ -175,7 +182,7 @@ localfile.prototype.format = function (item) {
  * @api public
  */
 localfile.prototype.hasFormatter = function () {
-	return typeof this.options.format === 'function';
+	return typeof this.options.format === "function";
 };
 
 /**
@@ -184,9 +191,11 @@ localfile.prototype.hasFormatter = function () {
  * @api public
  */
 localfile.prototype.href = function (item) {
-	if (!item.get(this.paths.filename)) return '';
-	var prefix = this.options.prefix ? this.options.prefix : item.get(this.paths.path);
-	return prefix + '/' + item.get(this.paths.filename);
+	if (!item.get(this.paths.filename)) return "";
+	var prefix = this.options.prefix
+		? this.options.prefix
+		: item.get(this.paths.path);
+	return prefix + "/" + item.get(this.paths.filename);
 };
 
 /**
@@ -198,16 +207,15 @@ localfile.prototype.isModified = function (item) {
 	return item.isModified(this.paths.path);
 };
 
-
-function validateInput (value) {
+function validateInput(value) {
 	// undefined values are always valid
 	if (value === undefined) return true;
 	// TODO: strings may not actually be valid but this will be OK for now
 	// If a string is provided, assume it's a file path and move the file into
 	// place. Come back and check the file actually exists if a string is provided
-	if (typeof value === 'string') return true;
+	if (typeof value === "string") return true;
 	// If the value is an object with a path, it is valid
-	if (typeof value === 'object' && value.path) return true;
+	if (typeof value === "object" && value.path) return true;
 	return false;
 }
 
@@ -224,7 +232,7 @@ localfile.prototype.validateInput = function (data, callback) {
  */
 localfile.prototype.validateRequiredInput = function (item, data, callback) {
 	var value = this.getValueFromData(data);
-	var result = (value || item.get(this.path).path) ? true : false;
+	var result = value || item.get(this.path).path ? true : false;
 	utils.defer(callback, result);
 };
 
@@ -233,7 +241,8 @@ localfile.prototype.validateRequiredInput = function (item, data, callback) {
  *
  * Deprecated
  */
-localfile.prototype.inputIsValid = function (data) { // eslint-disable-line no-unused-vars
+localfile.prototype.inputIsValid = function (data) {
+	// eslint-disable-line no-unused-vars
 	// TODO - how should file field input be validated?
 	return true;
 };
@@ -243,7 +252,8 @@ localfile.prototype.inputIsValid = function (data) { // eslint-disable-line no-u
  *
  * @api public
  */
-localfile.prototype.updateItem = function (item, data, callback) { // eslint-disable-line no-unused-vars
+localfile.prototype.updateItem = function (item, data, callback) {
+	// eslint-disable-line no-unused-vars
 	// TODO - direct updating of data (not via upload)
 	process.nextTick(callback);
 };
@@ -255,51 +265,58 @@ localfile.prototype.updateItem = function (item, data, callback) { // eslint-dis
  */
 localfile.prototype.uploadFile = function (item, file, update, callback) {
 	var field = this;
-	var prefix = field.options.datePrefix ? moment().format(field.options.datePrefix) + '-' : '';
+	var prefix = field.options.datePrefix
+		? moment().format(field.options.datePrefix) + "-"
+		: "";
 	var filename = prefix + file.name;
 	var filetype = file.mimetype || file.type;
 
-	if (field.options.allowedTypes && !_.includes(field.options.allowedTypes, filetype)) {
-		return callback(new Error('Unsupported File Type: ' + filetype));
+	if (
+		field.options.allowedTypes &&
+		!_.includes(field.options.allowedTypes, filetype)
+	) {
+		return callback(new Error("Unsupported File Type: " + filetype));
 	}
 
-	if (typeof update === 'function') {
+	if (typeof update === "function") {
 		callback = update;
 		update = false;
 	}
 
 	var doMove = function (callback) {
-
-		if (typeof field.options.filename === 'function') {
+		if (typeof field.options.filename === "function") {
 			filename = field.options.filename(item, file);
 		}
 
-		fs.move(file.path, path.join(field.options.dest, filename), { clobber: field.options.overwrite }, function (err) {
+		fs.move(
+			file.path,
+			path.join(field.options.dest, filename),
+			{ clobber: field.options.overwrite },
+			function (err) {
+				if (err) return callback(err);
 
-			if (err) return callback(err);
+				var fileData = {
+					filename: filename,
+					originalname: file.originalname,
+					path: field.options.dest,
+					size: file.size,
+					filetype: filetype,
+				};
 
-			var fileData = {
-				filename: filename,
-				originalname: file.originalname,
-				path: field.options.dest,
-				size: file.size,
-				filetype: filetype,
-			};
+				if (update) {
+					item.set(field.path, fileData);
+				}
 
-			if (update) {
-				item.set(field.path, fileData);
+				callback(null, fileData);
 			}
-
-			callback(null, fileData);
-
-		});
+		);
 	};
 
-	field.callHook('pre:move', item, file, function (err) {
+	field.callHook("pre:move", item, file, function (err) {
 		if (err) return callback(err);
 		doMove(function (err, fileData) {
 			if (err) return callback(err);
-			field.callHook('post:move', [item, file, fileData], function (err) {
+			field.callHook("post:move", [item, file, fileData], function (err) {
 				if (err) return callback(err);
 				callback(null, fileData);
 			});
@@ -317,7 +334,6 @@ localfile.prototype.uploadFile = function (item, file, update, callback) {
  * @api public
  */
 localfile.prototype.getRequestHandler = function (item, req, paths, callback) {
-
 	var field = this;
 
 	if (utils.isFunction(paths)) {
@@ -330,7 +346,6 @@ localfile.prototype.getRequestHandler = function (item, req, paths, callback) {
 	callback = callback || function () {};
 
 	return function () {
-
 		if (req.body) {
 			var action = req.body[paths.action];
 
@@ -344,9 +359,7 @@ localfile.prototype.getRequestHandler = function (item, req, paths, callback) {
 		}
 
 		return callback();
-
 	};
-
 };
 
 /* Export Field Type */

@@ -63,7 +63,7 @@ const LatestRelease = () => (
 		</span>
 		<span className={compose(styles.releaseSide)}>
 			<a
-				href="https://github.com/keystonejs/keystone/releases/"
+				href="https://github.com/safeh2o/keystone-v4/releases/"
 				style={{ color: "white" }}
 				target="_blank"
 			>

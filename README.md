@@ -1,7 +1,7 @@
 <div align="center">
   <h1>:warning: Archived :warning:</h1>
   <p>Keystone classic is not receiving any new updates.</p>
-    <p>We recommend using <a href="https://github.com/keystonejs/keystone" target="_blank">Keystone 6</a> for new projects.</p>
+    <p>We recommend using <a href="https://github.com/safeh2o/keystone-v4" target="_blank">Keystone 6</a> for new projects.</p>
   <br>
 </div>
 <br>
@@ -76,7 +76,7 @@ We have a friendly, growing community and welcome everyone to get involved:
 
 - Follow [@KeystoneJS](https://twitter.com/KeystoneJS) on twitter for news and announcements.
 - Ask technical questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/keystone.js) and tag them `keystonejs.`
-- Report bugs and feature suggestions on our GitHub [issue tracker](https://github.com/keystonejs/keystone/issues).
+- Report bugs and feature suggestions on our GitHub [issue tracker](https://github.com/safeh2o/keystone-v4/issues).
 - Join the [KeystoneJS Slack](https://launchpass.com/keystonejs) for general discussion with the Keystone community and contributors.
 
 We love to hear feedback about Keystone and the projects you're using it for. Ping us at [@KeystoneJS](https://twitter.com/KeystoneJS) on Twitter.
@@ -85,15 +85,15 @@ We love to hear feedback about Keystone and the projects you're using it for. Pi
 
 If you can, please contribute by reporting issues, discussing ideas, helping answer questions from other developers, or submitting pull requests with patches and new features. We do our best to respond to all issues and pull requests, and make patch releases to npm regularly.
 
-If you're going to contribute code, please follow our [coding standards](https://github.com/keystonejs/keystone/wiki/Coding-Standards) and read our [Contributing Guide](https://github.com/keystonejs/keystone/blob/master/CONTRIBUTING.md).
+If you're going to contribute code, please follow our [coding standards](https://github.com/safeh2o/keystone-v4/wiki/Coding-Standards) and read our [Contributing Guide](https://github.com/safeh2o/keystone-v4/blob/master/CONTRIBUTING.md).
 
 ### Related Projects
 
-If you are using KeystoneJS in any projects we encourage you to add to our [Related Projects Page](https://github.com/keystonejs/keystone/wiki/Related-Projects). This is also the place to find generators and other projects that bundle KeystoneJS.
+If you are using KeystoneJS in any projects we encourage you to add to our [Related Projects Page](https://github.com/safeh2o/keystone-v4/wiki/Related-Projects). This is also the place to find generators and other projects that bundle KeystoneJS.
 
 ### Thanks
 
-KeystoneJS is a free and open source community-driven project. Thanks to our many [contributors](https://github.com/keystonejs/keystone/graphs/contributors) and [users](https://github.com/keystonejs/keystone/stargazers) for making it great.
+KeystoneJS is a free and open source community-driven project. Thanks to our many [contributors](https://github.com/safeh2o/keystone-v4/graphs/contributors) and [users](https://github.com/safeh2o/keystone-v4/stargazers) for making it great.
 
 Keystone's development has been led by key contributors including [Jed Watson](https://github.com/JedWatson), [Joss Mackison](https://github.com/jossmac), and [Max Stoiber](https://github.com/mxstbr) and is proudly supported by [Thinkmill](https://thinkmill.com.au) in Sydney, Australia.
 

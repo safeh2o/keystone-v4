@@ -21,7 +21,7 @@ If the field's `format` option is a string (defaults to `"0,0[.][000000000000]"`
 
 ### `validateInput`
 
-Ensures that the value is either a number, or a string that can be interpreted as a number (see the `number(arg)` method in [keystone-utils](https://github.com/keystonejs/keystone-utils#conversion-utilities)).
+Ensures that the value is either a number, or a string that can be interpreted as a number (see the `number(arg)` method in [keystone-utils](https://github.com/safeh2o/keystone-v4-utils#conversion-utilities)).
 
 Allows `null` and `""` to clear the field value.
 
